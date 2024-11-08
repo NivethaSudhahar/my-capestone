@@ -15,9 +15,9 @@ mongoose.connect('mongodb+srv://user1:Nivethasudhahar@1@cluster0.7c5sh.mongodb.n
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
+  .then(() => console.log('Connected to MongoDB Atlas'))
+  .catch(err => console.error('MongoDB Atlas connection error:', err));
 
-mongoose.connection.on('connected', () => {
-  console.log('Connected to MongoDB');
 });
 
 // Routes
